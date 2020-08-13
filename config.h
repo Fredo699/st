@@ -88,7 +88,7 @@ const int boxdraw_braille = 1;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -256,15 +256,15 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
 	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
-	{ XK_ANY_MOD,		Button2,	selpaste,	{.i =  0} },
+	{ XK_ANY_MOD,		    Button2,	    selpaste,	    {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
+	{ ControlMask|MODKEY,   XK_k,           kscrollup,      {.i =  1} },
+	{ ControlMask|MODKEY,   XK_j,           kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
 	{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
